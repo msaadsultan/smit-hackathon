@@ -1,0 +1,171 @@
+{
+  "info": {
+    "name": "Campus Admin Agent API",
+    "description": "Postman collection to test all endpoints of the Campus Admin Agent project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Student",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Ali Khan\",\n  \"student_id\": \"S101\",\n  \"department\": \"Computer Science\",\n  \"email\": \"ali.khan@example.com\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/students",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["students"]
+        }
+      }
+    },
+    {
+      "name": "Get Student",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/students/S101",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["students", "S101"]
+        }
+      }
+    },
+    {
+      "name": "Update Student",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"field\": \"department\",\n  \"value\": \"AI & Data Science\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/students/S101",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["students", "S101"]
+        }
+      }
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://127.0.0.1:8000/students/S101",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["students", "S101"]
+        }
+      }
+    },
+    {
+      "name": "List Students",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/students",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["students"]
+        }
+      }
+    },
+    {
+      "name": "Analytics",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:8000/analytics",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["analytics"]
+        }
+      }
+    },
+    {
+      "name": "Chat",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"session_id\": \"test1\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"How many students are there?\"\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/chat",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["chat"]
+        }
+      }
+    },
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/x-www-form-urlencoded" }],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "username", "value": "testuser" },
+            { "key": "password", "value": "testpass" }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/auth/signup",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["auth", "signup"]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/x-www-form-urlencoded" }],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "username", "value": "testuser" },
+            { "key": "password", "value": "testpass" }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/auth/login",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "List Threads",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer <token>" }],
+        "url": {
+          "raw": "http://127.0.0.1:8000/threads",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["threads"]
+        }
+      }
+    }
+  ]
+}
