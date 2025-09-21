@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Campus AI Admin Agent
 
 A full-stack application that provides an AI-powered administrative interface for managing student interactions and campus activities. Built with FastAPI and Next.js, it enables educational institutions to manage student records, engage in real-time AI-assisted chat interactions, and track campus activities.
@@ -502,6 +503,9 @@ poetry run pytest backend/tests/
    - Verify NEXT_PUBLIC_API_URL in .env.local
    - Check CORS settings in backend
    - Ensure backend is running on correct port
+=======
+# campus-admin-ai-agent
+>>>>>>> 85bf2cb5d6ddb3f5a5cc5f03ab0354c4d2c39749
 =======
 # campus-admin-ai-agent
 >>>>>>> 85bf2cb5d6ddb3f5a5cc5f03ab0354c4d2c39749
