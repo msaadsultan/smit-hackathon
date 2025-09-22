@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Campus AI Admin Agent
 
 A full-stack application that provides an AI-powered administrative interface for managing student interactions and campus activities. Built with FastAPI and Next.js, it enables educational institutions to manage student records, engage in real-time AI-assisted chat interactions, and track campus activities.
